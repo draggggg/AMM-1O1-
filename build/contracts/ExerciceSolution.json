@@ -1,0 +1,831 @@
+{
+  "contractName": "ExerciceSolution",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IUniswapV2Factory",
+          "name": "_uniswapFactory",
+          "type": "address"
+        },
+        {
+          "internalType": "contract RichERC20",
+          "name": "_erc20",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IUniswapV2Factory\",\"name\":\"_uniswapFactory\",\"type\":\"address\"},{\"internalType\":\"contract RichERC20\",\"name\":\"_erc20\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/ExerciceSolution.sol\":\"ExerciceSolution\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/ExerciceSolution.sol\":{\"keccak256\":\"0xc40ea83bbed27c3490c5a89606a873b2d33bf8c2d884259c6739382f92429456\",\"urls\":[\"bzz-raw://5e70d044983325a207e36bcdf8a3d96b4b5d695a6d89533b6b39e9aea69b0f81\",\"dweb:/ipfs/QmRp7MQPwED1yShoC37BnUeRjF6mj1CGzse8JtwbZr7t9p\"]},\"/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/RichERC20.sol\":{\"keccak256\":\"0x5509dc625fe58629b66bc8c6b00c62a223b17a0a27e31547835d741f117c53b0\",\"urls\":[\"bzz-raw://c977d399b13af9d8d8d4c1d57a604f74f7734207e308d308da04cfe4b0c04e4a\",\"dweb:/ipfs/QmX3ju2z5r7NfbVdhgbBrATLaVEwfzK3PWBWaYJ6KH6CW9\"]},\"/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Factory.sol\":{\"keccak256\":\"0xbb02a490e88409dec5dd348332da3209c143899810f7b09c6daacd5c0e94da87\",\"urls\":[\"bzz-raw://29423a8d67eb9fafdacc511cef6465f1251d1b60b522a1fd9bdce70fab08ee0a\",\"dweb:/ipfs/QmfBVeA6RwP7tQdWoFHMHNrpS169cyuM28qDznG6LZ4Aig\"]},\"/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Pair.sol\":{\"keccak256\":\"0x6e301cd1c669825e95796a549af46ea9214abad484a2d687c9a8f4d3953457af\",\"urls\":[\"bzz-raw://1de1663b461dd369ecf043124025f4ce78fe281d6e972180012423584b9bb1ed\",\"dweb:/ipfs/QmNfYrPwNekvVs8nJLXp9v2b5AUMNUm7T7nNd9xdqozX7L\"]},\"/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Router.sol\":{\"keccak256\":\"0x7220d8147c7471550c65cbd8a243661687bd76afb80976e6cd7152f00d1160ea\",\"urls\":[\"bzz-raw://eaa1d5ec9f3d70a033f6c468d9e24c6b74db964270efc39de8253434c60069dc\",\"dweb:/ipfs/QmX4ag7YKUeT2FiJi3Q4WH3mJ8h5Wq6zS826dM1VwPN2Ro\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52\",\"urls\":[\"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c\",\"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xca0c2396dbeb3503b51abf4248ebf77a1461edad513c01529df51850a012bee3\",\"urls\":[\"bzz-raw://991b44ff44e0496e8554a90f4c0512c28faed45104d40430019f3c67ea67740e\",\"dweb:/ipfs/Qmc3nRapVbcctELoZS5qe17zLkFB3bETBfwzCTMF1CSuGE\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060405161011c38038061011c83398181016040526040811015603157600080fd5b810190808051906020019092919080519060200190929190505050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050603f806100dd6000396000f3fe6080604052600080fdfea2646970667358221220d50ff4db152ecb5222d60035a104d619f57e60d7cb842378c774b3d2830f627564736f6c63430006020033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220d50ff4db152ecb5222d60035a104d619f57e60d7cb842378c774b3d2830f627564736f6c63430006020033",
+  "sourceMap": "233:467:0:-:0;;;355:149;8:9:-1;5:2;;;30:1;27;20:12;5:2;355:149:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;355:149:0;;;;;;;;;;;;;;;;;;;;;;;;;456:15;439:14;;:32;;;;;;;;;;;;;;;;;;490:6;482:5;;:14;;;;;;;;;;;;;;;;;;355:149;;233:467;;;;;;",
+  "deployedSourceMap": "233:467:0:-:0;;;;;",
+  "source": "pragma solidity ^0.6.0;\r\n\r\nimport \"./utils/IUniswapV2Factory.sol\";\r\nimport \"./utils/IUniswapV2Pair.sol\";\r\nimport \"./RichERC20.sol\";\r\nimport \"./utils/IUniswapV2Router.sol\";\r\nimport \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\r\n\r\ncontract ExerciceSolution {\r\n    IUniswapV2Factory uniswapFactory;\r\n    RichERC20 erc20;\r\n    IUniswapV2Pair pair;\r\n\r\n    constructor (IUniswapV2Factory _uniswapFactory, RichERC20 _erc20) public {\r\n        uniswapFactory = _uniswapFactory;\r\n        erc20 = _erc20;\r\n    }\r\n\r\n    // function addLiquidity() external;\r\n\r\n\t// function withdrawLiquidity() external;\r\n\r\n\t// function swapYourTokenForDummyToken() external;\r\n\r\n\t// function swapYourTokenForEth() external;\r\n}",
+  "sourcePath": "C:/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/ExerciceSolution.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/ExerciceSolution.sol",
+    "exportedSymbols": {
+      "ExerciceSolution": [
+        29
+      ]
+    },
+    "id": 30,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Factory.sol",
+        "file": "./utils/IUniswapV2Factory.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 30,
+        "sourceUnit": 136,
+        "src": "27:39:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Pair.sol",
+        "file": "./utils/IUniswapV2Pair.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 30,
+        "sourceUnit": 378,
+        "src": "68:36:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/RichERC20.sol",
+        "file": "./RichERC20.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 30,
+        "sourceUnit": 73,
+        "src": "106:25:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Router.sol",
+        "file": "./utils/IUniswapV2Router.sol",
+        "id": 5,
+        "nodeType": "ImportDirective",
+        "scope": 30,
+        "sourceUnit": 771,
+        "src": "133:38:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 6,
+        "nodeType": "ImportDirective",
+        "scope": 30,
+        "sourceUnit": 1665,
+        "src": "173:56:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 29,
+        "linearizedBaseContracts": [
+          29
+        ],
+        "name": "ExerciceSolution",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 8,
+            "name": "uniswapFactory",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 29,
+            "src": "266:32:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IUniswapV2Factory_$135",
+              "typeString": "contract IUniswapV2Factory"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 7,
+              "name": "IUniswapV2Factory",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 135,
+              "src": "266:17:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IUniswapV2Factory_$135",
+                "typeString": "contract IUniswapV2Factory"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 10,
+            "name": "erc20",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 29,
+            "src": "305:15:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_RichERC20_$72",
+              "typeString": "contract RichERC20"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 9,
+              "name": "RichERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 72,
+              "src": "305:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RichERC20_$72",
+                "typeString": "contract RichERC20"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 12,
+            "name": "pair",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 29,
+            "src": "327:19:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IUniswapV2Pair_$377",
+              "typeString": "contract IUniswapV2Pair"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 11,
+              "name": "IUniswapV2Pair",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 377,
+              "src": "327:14:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IUniswapV2Pair_$377",
+                "typeString": "contract IUniswapV2Pair"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 27,
+              "nodeType": "Block",
+              "src": "428:76:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 19,
+                      "name": "uniswapFactory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 8,
+                      "src": "439:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IUniswapV2Factory_$135",
+                        "typeString": "contract IUniswapV2Factory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 20,
+                      "name": "_uniswapFactory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "456:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IUniswapV2Factory_$135",
+                        "typeString": "contract IUniswapV2Factory"
+                      }
+                    },
+                    "src": "439:32:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IUniswapV2Factory_$135",
+                      "typeString": "contract IUniswapV2Factory"
+                    }
+                  },
+                  "id": 22,
+                  "nodeType": "ExpressionStatement",
+                  "src": "439:32:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 25,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 23,
+                      "name": "erc20",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "482:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_RichERC20_$72",
+                        "typeString": "contract RichERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 24,
+                      "name": "_erc20",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 16,
+                      "src": "490:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_RichERC20_$72",
+                        "typeString": "contract RichERC20"
+                      }
+                    },
+                    "src": "482:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_RichERC20_$72",
+                      "typeString": "contract RichERC20"
+                    }
+                  },
+                  "id": 26,
+                  "nodeType": "ExpressionStatement",
+                  "src": "482:14:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 28,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 17,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "name": "_uniswapFactory",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 28,
+                  "src": "368:33:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IUniswapV2Factory_$135",
+                    "typeString": "contract IUniswapV2Factory"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 13,
+                    "name": "IUniswapV2Factory",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 135,
+                    "src": "368:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IUniswapV2Factory_$135",
+                      "typeString": "contract IUniswapV2Factory"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16,
+                  "name": "_erc20",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 28,
+                  "src": "403:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_RichERC20_$72",
+                    "typeString": "contract RichERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 15,
+                    "name": "RichERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 72,
+                    "src": "403:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_RichERC20_$72",
+                      "typeString": "contract RichERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "367:53:0"
+            },
+            "returnParameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "428:0:0"
+            },
+            "scope": 29,
+            "src": "355:149:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 30,
+        "src": "233:467:0"
+      }
+    ],
+    "src": "0:700:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/ExerciceSolution.sol",
+      "exportedSymbols": {
+        "ExerciceSolution": [
+          29
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 136,
+          "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Factory.sol",
+          "file": "./utils/IUniswapV2Factory.sol",
+          "scope": 30,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2,
+        "name": "ImportDirective",
+        "src": "27:39:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 378,
+          "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Pair.sol",
+          "file": "./utils/IUniswapV2Pair.sol",
+          "scope": 30,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 3,
+        "name": "ImportDirective",
+        "src": "68:36:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 73,
+          "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/RichERC20.sol",
+          "file": "./RichERC20.sol",
+          "scope": 30,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 4,
+        "name": "ImportDirective",
+        "src": "106:25:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 771,
+          "absolutePath": "/C/Users/Admin/Documents/Semestre 8/defi/amm-101/contracts/utils/IUniswapV2Router.sol",
+          "file": "./utils/IUniswapV2Router.sol",
+          "scope": 30,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 5,
+        "name": "ImportDirective",
+        "src": "133:38:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1665,
+          "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+          "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+          "scope": 30,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 6,
+        "name": "ImportDirective",
+        "src": "173:56:0"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            29
+          ],
+          "name": "ExerciceSolution",
+          "scope": 30
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "uniswapFactory",
+              "overrides": null,
+              "scope": 29,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract IUniswapV2Factory",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IUniswapV2Factory",
+                  "referencedDeclaration": 135,
+                  "type": "contract IUniswapV2Factory"
+                },
+                "id": 7,
+                "name": "UserDefinedTypeName",
+                "src": "266:17:0"
+              }
+            ],
+            "id": 8,
+            "name": "VariableDeclaration",
+            "src": "266:32:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "erc20",
+              "overrides": null,
+              "scope": 29,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract RichERC20",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "RichERC20",
+                  "referencedDeclaration": 72,
+                  "type": "contract RichERC20"
+                },
+                "id": 9,
+                "name": "UserDefinedTypeName",
+                "src": "305:9:0"
+              }
+            ],
+            "id": 10,
+            "name": "VariableDeclaration",
+            "src": "305:15:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "pair",
+              "overrides": null,
+              "scope": 29,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract IUniswapV2Pair",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IUniswapV2Pair",
+                  "referencedDeclaration": 377,
+                  "type": "contract IUniswapV2Pair"
+                },
+                "id": 11,
+                "name": "UserDefinedTypeName",
+                "src": "327:14:0"
+              }
+            ],
+            "id": 12,
+            "name": "VariableDeclaration",
+            "src": "327:19:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 29,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_uniswapFactory",
+                      "overrides": null,
+                      "scope": 28,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IUniswapV2Factory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "IUniswapV2Factory",
+                          "referencedDeclaration": 135,
+                          "type": "contract IUniswapV2Factory"
+                        },
+                        "id": 13,
+                        "name": "UserDefinedTypeName",
+                        "src": "368:17:0"
+                      }
+                    ],
+                    "id": 14,
+                    "name": "VariableDeclaration",
+                    "src": "368:33:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_erc20",
+                      "overrides": null,
+                      "scope": 28,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract RichERC20",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "RichERC20",
+                          "referencedDeclaration": 72,
+                          "type": "contract RichERC20"
+                        },
+                        "id": 15,
+                        "name": "UserDefinedTypeName",
+                        "src": "403:9:0"
+                      }
+                    ],
+                    "id": 16,
+                    "name": "VariableDeclaration",
+                    "src": "403:16:0"
+                  }
+                ],
+                "id": 17,
+                "name": "ParameterList",
+                "src": "367:53:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 18,
+                "name": "ParameterList",
+                "src": "428:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract IUniswapV2Factory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 8,
+                              "type": "contract IUniswapV2Factory",
+                              "value": "uniswapFactory"
+                            },
+                            "id": 19,
+                            "name": "Identifier",
+                            "src": "439:14:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 14,
+                              "type": "contract IUniswapV2Factory",
+                              "value": "_uniswapFactory"
+                            },
+                            "id": 20,
+                            "name": "Identifier",
+                            "src": "456:15:0"
+                          }
+                        ],
+                        "id": 21,
+                        "name": "Assignment",
+                        "src": "439:32:0"
+                      }
+                    ],
+                    "id": 22,
+                    "name": "ExpressionStatement",
+                    "src": "439:32:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract RichERC20"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10,
+                              "type": "contract RichERC20",
+                              "value": "erc20"
+                            },
+                            "id": 23,
+                            "name": "Identifier",
+                            "src": "482:5:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 16,
+                              "type": "contract RichERC20",
+                              "value": "_erc20"
+                            },
+                            "id": 24,
+                            "name": "Identifier",
+                            "src": "490:6:0"
+                          }
+                        ],
+                        "id": 25,
+                        "name": "Assignment",
+                        "src": "482:14:0"
+                      }
+                    ],
+                    "id": 26,
+                    "name": "ExpressionStatement",
+                    "src": "482:14:0"
+                  }
+                ],
+                "id": 27,
+                "name": "Block",
+                "src": "428:76:0"
+              }
+            ],
+            "id": 28,
+            "name": "FunctionDefinition",
+            "src": "355:149:0"
+          }
+        ],
+        "id": 29,
+        "name": "ContractDefinition",
+        "src": "233:467:0"
+      }
+    ],
+    "id": 30,
+    "name": "SourceUnit",
+    "src": "0:700:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2022-02-11T00:45:55.106Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
